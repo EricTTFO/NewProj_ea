@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Eric--</title>
+
+    <link rel="stylesheet" href="style.css">
+<body>
+
+<header id="header">
+    <div class="center">
+        <h1 class="logo"></h1>
+        <nav class="link">
+            <h2 class="none">导航</h2>
+            <ul>
+                <li><a href="tencent://message/?uin=">启动QQ</a></li>
+                <li><a href="https://wx.qq.com/" target="_blank"><span class="xs-hidden">网页版微信</span>打开微信</a></li>
+                <li class="xs-hidden"><a href="http://weibo.com/" target="_blank">新浪微博</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div id="search">
+    <div class="center"></div>
+    <div class="center copy">
+        <form onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
+            <input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w">
+            <a href="https://www.baidu.com/" target="_blank"></a>
+
+            <input type="text"  onfocus="checkHttps" placeholder="输入搜索相关内容" class="search" name="word"  size="30">
+
+            <button type="submit" value="搜索" class="button">搜索</button>
+        </form>
+        <script src="http://s1.bdstatic.com/r/www/cache/global/js/BaiduHttps_20150714_zhanzhang.js"></script>
+        <script>
+            function checkHttps () {
+                BaiduHttps.useHttps();
+            }
+            function baiduWithHttps (formname) {
+                var data = BaiduHttps.useHttps();
+                if (data.s === 0) {
+                    return true;
+                }
+                else {
+                    formname.action = 'https://www.baidu.com/baidu' + '?ssl_s=1&ssl_c' + data.ssl_code;
+                    return true;
+                }
+            }
+        </script>
+    </div>
+
+</div>
+<div id="menu">
+    <section  class="center">
+        <h2>常用</h2>
+        <p>pc端，移动端，兼容响应式页面。</p>
+    </section>
+    <figure>
+        <a href="http://www.qq.com/" target="_blank"></a>
+        <img src="img/腾讯.jpg" alt="">
+        <div>
+            <em class="sat">中国浏览量最大的中文门户网站</em>
+            <span class="score"><strong>腾讯网</strong></span>
+        </div>
+        <div class="type">腾讯</div>
+    </figure>
+    <figure>
+        <a href="http://www.sina.com.cn/" target="_blank"></a>
+        <img src="img/sina.jpg" alt="">
+        <div>
+            <em class="sat">为全球用户24小时提供全面及时的中文资讯</em>
+            <span class="score"><strong>新浪网</strong></span>
+        </div>
+        <div class="type">新浪</div>
+    </figure>
+    <figure>
+        <a href="http://www.163.com/" target="_blank"></a>
+        <img src="img/网易.jpg" alt="">
+        <div>
+            <em class="sat">最有态度的网站</em>
+            <span class="score"><strong>网易</strong></span>
+        </div>
+        <div class="type">网易</div>
+    </figure>
+    <figure>
+        <a href="http://www.huxiu.com/" target="_blank"></a>
+        <img src="img/虎嗅.png" alt="">
+        <div>
+            <em class="sat">带给你最新的资讯</em>
+            <span class="score"><strong>虎嗅</strong></span>
+        </div>
+        <div class="type">虎嗅</div>
+    </figure>
+    <figure>
+        <a href="https://www.zhihu.com/" target="_blank"></a>
+        <img src="img/知乎.png" alt="">
+        <div>
+            <em class="sat">知无不言</em>
+            <span class="score"><strong>知乎</strong></span>
+        </div>
+        <div class="type">知乎</div>
+    </figure>
+    <figure>
+        <a href="http://36kr.com/" target="_blank"></a>
+        <img src="img/36kr.jpg" alt="">
+        <div>
+            <em class="sat">为创业者提供最好的产品和服务</em>
+            <span class="score"><strong>36氪</strong></span>
+        </div>
+        <div class="type">36kr</div>
+    </figure>
+    <figure>
+        <a href="http://www.woshipm.com/" target="_blank"></a>
+        <img src="img/人人都是产品经理.jpg" alt="">
+        <div>
+            <em class="sat">产品经理、产品爱好者学习交流平台</em>
+            <span class="score"><strong>人人都是产品经理</strong></span>
+        </div>
+        <div class="type">人人都是产品经理</div>
+    </figure>
+    <figure>
+        <a href="http://www.iqiyi.com/" target="_blank"></a>
+        <img src="img/爱奇艺.jpg" alt="">
+        <div>
+            <em class="sat">中国领先的视频门户</em>
+            <span class="score"><strong>爱奇艺</strong></span>
+        </div>
+        <div class="type">爱奇艺</div>
+    </figure>
+    <figure>
+        <a href="http://www.youku.com/" target="_blank"></a>
+        <img src="img/youku.png" alt="">
+        <div>
+            <em class="sat">中国领先的视频网站</em>
+            <span class="score"><strong>优酷</strong></span>
+        </div>
+        <div class="type">优酷</div>
+    </figure>
+    <figure>
+        <a href="https://www.douban.com/" target="_blank"></a>
+        <img src="img/豆瓣.png" alt="">
+        <div>
+            <em class="sat">提供图书、电影、音乐唱片的推荐</em>
+            <span class="score"><strong>豆瓣</strong></span>
+        </div>
+        <div class="type">豆瓣</div>
+    </figure>
+    <figure>
+        <a href="http://bbs.hupu.com/" target="_blank"></a>
+        <img src="img/hupu.png" alt="">
+        <div>
+            <em class="sat">最专业的篮球网站</em>
+            <span class="score"><strong>虎扑</strong></span>
+        </div>
+        <div class="type">虎扑</div>
+    </figure>
+    <figure>
+        <a href="http://www.jianshu.com/" target="_blank"></a>
+        <img src="img/简书.png" alt="">
+        <div>
+            <em class="sat">最简洁的博客</em>
+            <span class="score"><strong>简书</strong></span>
+        </div>
+        <div class="type">简书</div>
+    </figure>
+    <figure>
+        <a href="https://www.taobao.com/" target="_blank"></a>
+        <img src="img/淘宝.jpg" alt="">
+        <div>
+            <em class="sat">只有想不到，没有买不到</em>
+            <span class="score"><strong>淘宝</strong></span>
+        </div>
+        <div class="type">淘宝</div>
+    </figure>
+    <figure>
+        <a href="http://www.qunar.com/" target="_blank"></a>
+        <img src="img/去哪儿.png" alt="">
+        <div>
+            <em class="sat">特价机票,超值酒店,省心省钱,聪明你的旅行!</em>
+            <span class="score"><strong>简书</strong></span>
+        </div>
+        <div class="type">去哪儿</div>
+    </figure>
+    <figure>
+        <a href="http://www.meituan.com/" target="_blank"></a>
+        <img src="img/美团.png" alt="">
+        <div>
+            <em class="sat">吃喝玩乐好帮手,专业品质团购网</em>
+            <span class="score"><strong>美团</strong></span>
+        </div>
+        <div class="type">美团</div>
+    </figure>
+    <div class="clearfix"></div>
+</div>
+
+<footer id="footer">
+    <div class="top sm-hidden">
+        <div class="block left">
+            <h2>文艺</h2>
+            <hr>
+            <ul>
+                <li><a href="https://wuzhi.me/last" target="_blank">吾志</a></li>
+                <li><a href="http://www.kdatu.com/" target="_blank">看大图</a></li>
+                <li><a href="http://youqu.de/" target="_blank">有趣的</a></li>
+                <li><a href="http://www.sketchswap.com/" target="_blank">一画换一画</a></li>
+                <li><a href="http://www.topit.me/" target="_blank">收录美好的图片it.me</a></li>
+            </ul>
+        </div>
+
+        <div class="block center">
+            <h2>小众</h2>
+            <hr>
+            <ul>
+                <li><a href="http://www.qingfanqie.com/" target="_blank">青番茄</a></li>
+                <li><a href="http://www.duitang.com/" target="_blank">堆糖网 </a></li>
+                <li><a href="http://www.xiachufang.com/" target="_blank">下厨房</a></li>
+                <li><a href="http://ondream.org/" target="_blank">在梦上</a></li>
+                <li><a href="http://xianguo.com/hot" target="_blank">鲜果</a></li>
+            </ul>
+        </div>
+
+        <div class="block right">
+            <h2>青年</h2>
+            <hr>
+            <ul>
+                <li><a href="http://www.zimuzu.tv/" target="_blank">人人影视</a></li>
+                <li><a href="http://www.xiangdang.net/" target="_blank">香当</a></li>
+                <li><a href="http://www.blouth.com/portal.php" target="_blank">花开暖年</a></li>
+                <li><a href="http://blah.me/category/21" target="_blank">Blah书库</a></li>
+                <li><a href="http://www.u148.net/" target="_blank">有意思吧</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="version sm-visible">
+        客户端 | 触屏版 | 电脑版
+    </div>
+    <div class="bottom">Copyright © Jin<span class="sm-hidden">| 浙</span></div>
+</footer>
+
+</body>
+</html>

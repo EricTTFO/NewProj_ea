@@ -1,0 +1,427 @@
+body {
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+body, h1, h2, h3, ul, p, ol, form, fieldset, figure {
+    margin: 0;
+    padding: 0;
+}
+
+div, figure, img, input, button {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft YaHei UI", "Microsoft YaHei", SimHei, "宋体", SimSun, Sans-Serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul, ol {
+    list-style: outside none none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.none {
+    display: none;
+}
+
+.sm-visible {
+    display: none;
+}
+
+.clearfix:after {
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+#header {
+    width: 100%;
+    height: 65px;
+    background-color: #333;
+    box-shadow: 0 11px 10px rgba(0, 0, 0, 0.3);
+/ / 导航栏阴印 position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+#header .center {
+    max-width: 1263px;
+    height: 65px;
+    margin: 0 auto;
+}
+
+#header .logo {
+    margin: 1px;
+    width: 30%;
+    height: 62px;
+    background: url(img/LOGO.png) no-repeat left;
+    text-indent: -9999px;
+    float: left;
+}
+
+#header .link {
+    width: 69%;
+    height: 65px;
+    line-height: 65px;
+    color: #eee;
+    float: right;
+}
+
+#header .link li {
+    width: 33.3%;
+    text-align: center;
+    float: right;
+}
+
+#header .link a {
+    color: #eee;
+    display: block;
+}
+
+#header .link a:hover,
+#header .active a {
+    background-color: #000;
+}
+
+#search {
+    width: 100%;
+    max-width: 1920px;
+    height: 550px;
+    background: url(img/海岛.jpg) no-repeat center;
+    position: relative;
+    margin: 0 auto;
+    padding: 70px 0 0 0;
+}
+
+#search .center {
+    width: 40%;
+    height: 60px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -20%;
+    opacity: 0.6;
+    border-radius: 10px;
+}
+
+#search .copy {
+    opacity: 1;
+    background-color: transparent;
+    padding: 3px 3px 0 3px;
+}
+
+#search .search {
+    width: 70%;
+    height: 54px;
+    background-color: #fff;
+    color: #666;
+    border: 1px solid #666;
+    border-radius: 10px;
+    font-size: 24px;
+    padding: 0 10px;
+    outline: none;
+    display: block;
+    float: left;
+}
+
+#search .button {
+    width: 30%;
+    height: 54px;
+    background-color: #eee;
+    color: #666;
+    border: 1px solid #333;
+    border-left-width: 3px;
+    border-radius: 10px;
+    font-size: 24px;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    float: right;
+}
+
+#menu {
+    max-width: 1263px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#menu .center h2 {
+    font-size: 45px;
+    letter-spacing: 2px;
+    color: #666;
+    margin: 10px 0;
+}
+
+#menu .center p {
+    color: #666;
+    margin: 10px;
+    font-size: 16px;
+}
+
+#menu figure {
+    border: 1px solid #ddd;
+    display: inline-block;
+    padding: 4px;
+    border-radius: 4px;
+    margin: 25px 0.4%;
+    width: 31%;
+    text-align: left;
+    position: relative;
+}
+
+#menu figure img {
+    vertical-align: middle;
+}
+
+#menu .sat {
+    float: right;
+    font-size: 13px;
+    color: #999;
+    font-style: normal;
+    position: relative;
+    top: 5px;
+    right: 5px;
+    line-height: 15px;
+    overflow: hidden;
+}
+
+#menu .score {
+    color: #f60;
+    font-size: 14px;
+    line-height: 15px;
+    overflow: hidden;
+}
+
+#menu .score strong {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+#menu .type {
+/ / 标签 width: 90 px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background-color: #ccc;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+}
+
+/*媒体查询，参考部分Bootstarp框架*/
+/*当页面大于1200px时，大屏幕，主要显示PC端*/
+@media (min-width: 1200px) {
+}
+
+/*在992 和1199 像素之间的屏幕里，中等屏幕，分辨率低的PC*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    #search .center {
+        width: 50%;
+        margin: -10px 0 0 -25%;
+    }
+
+    #menu .center h2 {
+        font-size: 40px;
+    }
+}
+
+/*在768 和991 像素之间的屏幕里，小屏幕，主要是PAD*/
+@media (min-width: 768px) and (max-width: 991px) {
+    #search .center {
+        width: 60%;
+        margin: -10px 0 0 -30%;
+    }
+
+    #search .search, #search .button {
+        font-size: 20px;
+    }
+
+    #menu .center h2 {
+        font-size: 35px;
+    }
+}
+
+/*在480 和767 像素之间的屏幕里，超小屏幕，主要是手机*/
+@media (min-width: 480px) and (max-width: 767px) {
+    #header, #header .link, #header .center {
+        height: 45px;
+    }
+
+    #header .logo, .sm-hidden {
+        display: none;
+    }
+
+    #header .link {
+        width: 100%;
+        line-height: 45px;
+    }
+
+    #search {
+        padding: 45px 0 0 0;
+    }
+
+    #search .center {
+        width: 70%;
+        height: 53px;
+        margin: -10px 0 0 -35%;
+    }
+
+    #search .search, #search .button {
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .sm-visible {
+        display: block;
+    }
+
+    #menu .center h2 {
+        font-size: 30px;
+    }
+
+    #menu .center p {
+        font-size: 15px;
+    }
+
+    #menu figure {
+        width: 49.2%;
+    }
+}
+
+/*在小于480px的屏幕里，微小屏幕，更低分辨率的手机*/
+@media (max-width: 479px) {
+    #header, #header .link, #header .center {
+        height: 45px;
+    }
+
+    #header .logo, .xs-hidden, .sm-hidden {
+        display: none;
+    }
+
+    #header .link {
+        width: 100%;
+        line-height: 45px;
+    }
+
+    #header .link li {
+        width: 50%;
+    }
+
+    #search {
+        padding: 45px 0 0 0;
+    }
+
+    #search .center {
+        height: 48px;
+        width: 80%;
+        margin: -10px 0 0 -40%;
+    }
+
+    #search .search, #search .button {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .sm-visible {
+        display: block;
+    }
+
+    #footer .bottom, #footer .version {
+        font-size: 13px;
+    }
+
+    #menu .center h2 {
+        font-size: 26px;
+    }
+
+    #menu .center p {
+        font-size: 14px;
+    }
+
+    #menu figure {
+        width: 99%;
+    }
+}
+
+#footer {
+    width: 100%;
+    background-color: #83858C;
+    text-align: center;
+}
+
+#footer .top {
+    max-width: 1263px;
+    width: 1263px;
+    height: 280px;
+    margin: 0 auto;
+}
+
+#footer .version {
+    color: #777;
+    text-align: center;
+    padding: 10px;
+}
+
+#footer .block {
+    width: 33.3%;
+    height: 320px;
+    text-align: left;
+    color: #ccc;
+    vertical-align: top;
+    display: block;
+    float: left;
+}
+
+#footer a:link,
+#footer a:visited {
+    color: #000000;
+    text-decoration: underline;
+}
+
+#footer a:hover,
+#footer a:active {
+    color: #e0e7ec;
+    text-decoration: none;
+}
+
+#footer h2 {
+    font-size: 24px;
+    font-weight: normal;
+    padding: 20px 0 0 20px;
+}
+
+#footer hr {
+    width: 90%;
+    border: 1px dashed #333;
+}
+
+#footer ul {
+    font-size: 18px;
+    color: #000000;
+    text-indent: 20px;
+    line-height: 2;
+}
+
+#footer .bottom {
+    padding: 15px 0;
+    background-color: #000;
+    color: #777;
+    text-align: center;
+    border-top: 1px solid #444;
+}
